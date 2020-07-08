@@ -14,8 +14,12 @@ public class MapFilterReduce {
 		String[] players = new String[] {"Vishesh","Supriya","Anuraaga","Prajna"};
 		System.out.println(players.length);
 		Stream<String> playerStream = Arrays.stream(players);
-		Stream<String> x = playerStream.map(player -> player.toUpperCase());
-		System.out.println(x);
+		Stream<String> upperCaseStream = playerStream.map(player -> player.toUpperCase());
+		String[] newPlayers = upperCaseStream.toArray(String[]::new);
+		
+		for(String player:newPlayers) {
+			System.out.println(player);
+		}
 	}
 
 }
