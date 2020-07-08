@@ -1,0 +1,74 @@
+package julyWeek1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.lang.model.element.Element;
+
+import org.omg.CORBA.Object;
+
+public class ParallelStreamPerformanceTesting {
+
+	public static void main(String[] args) {
+		
+		long time1 = parallelStream();
+		long time2 = sequentialStream();
+		System.out.println("Time Taken"+(time1-time2));
+	}
+//multicore threading
+	public static long parallelStream() {
+		List<Integer> productList = new ArrayList<Integer>();
+		productList.add(11653);
+		for (int i = 0; i < 10; i++) {
+			int lastValue = productList.get(i);
+			productList.add(lastValue + 2300);
+		}
+		System.out.println("Input List ---->" + productList);
+		long start = System.nanoTime();
+		List serialList = new ArrayList();
+		// Returns a sequential stream with this collection as its source.
+		// A sequence of elements supporting sequential and parallel operations.
+		// Filter method:returns a stream consisting of elements of this stream that
+		// math given prediction.
+		// It takes test condition.
+		productList.parallelStream().filter(element -> element > 5000).filter(element -> element > 10000)
+				.forEach(System.out::println);
+		productList.stream().filter(element -> element > 5000).filter(element -> element > 10000).forEach(item -> {
+			System.out.println(Thread.currentThread().getName()+">>>"+item);
+			serialList.add(item);
+			System.out.println("Hi Supriya!!");
+
+		});
+		long fineshed = System.nanoTime();
+		long timeElapsed = fineshed - start;
+		return timeElapsed;
+	}
+	public static long sequentialStream() {
+		List<Integer> productList = new ArrayList<Integer>();
+		productList.add(10453);
+		for (int i = 0; i < 10; i++) {
+			int lastValue = productList.get(i);
+			productList.add(lastValue + 2300);
+		}
+		System.out.println("Input List ---->" + productList);
+		long start = System.nanoTime();
+		List serialList = new ArrayList();
+		// Returns a sequential stream with this collection as its source.
+		// A sequence of elements supporting sequential and parallel operations.
+		// Filter method:returns a stream consisting of elements of this stream that
+		// math given prediction.
+		// It takes test condition.
+		productList.stream().filter(element -> element > 5000).filter(element -> element > 10000)
+				.forEach(System.out::println);
+		productList.stream().filter(element -> element > 5000).filter(element -> element > 10000).forEach(item -> {
+			System.out.println(Thread.currentThread().getName()+">>>>"+item);
+			serialList.add(item);
+			System.out.println("Hi Supriya!!");
+
+		});
+		long fineshed = System.nanoTime();
+		long timeElapsed = fineshed - start;
+		return timeElapsed;
+	}
+
+}

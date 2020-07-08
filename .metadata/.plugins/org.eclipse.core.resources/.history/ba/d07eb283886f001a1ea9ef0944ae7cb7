@@ -1,0 +1,37 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class Demo_Aa3 {
+
+	public static void main(String[] args) {
+		try {
+			String dBURL="jdbc:mysql://localhost:3309/Sakila";
+			String userName = "root";
+			String password = "Volvo9400$l";
+			int userid=203;
+			String userNme="Kshama M";
+			String lastName="Udupa";
+			String lastUpdate = "2020-09-16 04:34:33";
+			String query = "INSERT INTO Sakila.Actor(actor_id,first_name,last_name,last_update) VALUES('"+userid+"','"+userNme+"','"+lastName+"','"+lastUpdate+"')";
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection connection=DriverManager.getConnection(dBURL, userName, password);
+			PreparedStatement statement = connection.prepareStatement(query);
+			statement.setInt(1,userid);
+			statement.setString(2, userNme);
+			statement.setString(3, lastName);
+			statement.setString(4, lastUpdate);
+			int count = statement.executeUpdate();
+			System.out.println("Row/s Modified" + ":"+count);
+			statement.close();
+			connection.close();
+		}catch(Exception e) {
+			System.out.println(e);
+			e.printStackTrace();
+		}
+
+	}
+
+}

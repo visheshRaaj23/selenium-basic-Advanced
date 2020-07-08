@@ -1,0 +1,26 @@
+package julyWeek1;
+
+import java.util.Optional;
+
+public class OptionalDemo {
+	static String testString;
+
+	public OptionalDemo() {
+
+	}
+
+	public static void main(String[] args) {
+	
+		if (Math.random() > 0.5) {
+			testString = "Welcome Supriya";
+		}
+		
+		Optional optionalString = Optional.ofNullable(testString);
+		if (optionalString.isPresent()) {
+			System.out.println(testString.length());
+		} else {
+			System.out.println("No String or Null String");
+		}
+	}
+
+}

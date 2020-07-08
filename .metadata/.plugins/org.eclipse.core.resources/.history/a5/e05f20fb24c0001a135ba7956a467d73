@@ -1,0 +1,13 @@
+package julyWeek1;
+
+public class WrapperClass {
+	
+	public static void main(String[] args) {
+		
+		//Primitive is converted into reference type
+		int i=10;
+		Integer integer=i;
+		
+	}
+
+}

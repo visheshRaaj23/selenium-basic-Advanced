@@ -1,0 +1,21 @@
+package julyWeek1;
+
+public class RunnableLambda {
+
+	public static void main(String[] args) {
+		System.out.println(Thread.currentThread().getName());
+		TestThread testThread = new TestThread();
+		testThread.start();
+	}
+}
+//User Story:Create a Lambda Expression
+
+class TestThread extends Thread{
+	@Override
+	public void run() {
+		
+		System.out.println("Child Thread");
+		// TODO Auto-generated method stub
+		super.run();
+	}
+}

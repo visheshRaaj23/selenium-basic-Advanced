@@ -1,0 +1,15 @@
+package julyWeek1;
+
+public class WrapperClass {
+	
+	public static void main(String[] args) {
+		
+		//Primitive is converted into reference type is called Boxing.
+		int i=10;
+		Integer integer=i;
+		System.out.println(i+i);
+		System.out.println(integer.toString()+"---"+integer.toString());
+		
+	}
+
+}

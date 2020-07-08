@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;utilities&apos; to &apos;SelfHealingAutomationFramework/src/test/java&apos;&#x0D;&#x0A;- Original project: &apos;Strings&apos;&#x0D;&#x0A;- Destination element: &apos;SelfHealingAutomationFramework/src/test/java&apos;&#x0D;&#x0A;- Original element: &apos;Strings/src/utilities&apos;" description="Copy package" destination="=SelfHealingAutomationFramework/src\/test\/java" element1="/src&lt;utilities" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1586438075799" version="1.0"/>
+</session>

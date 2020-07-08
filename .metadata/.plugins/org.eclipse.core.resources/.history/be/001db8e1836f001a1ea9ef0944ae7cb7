@@ -1,0 +1,22 @@
+package jdbc;
+
+public class Demo_Aa2 {
+
+	public static void main(String[] args) {
+		try {
+			String dBURL="jdbc:mysql://localhost:3309/sakila";
+			String userName = "root";
+			String password = "Volvo9400$l";
+			int userid=202;
+			String userNme="Varsha M";
+			String lastName="Udupa";
+			String lastUpdate = "2020-01-23 04:34:33";
+			String query = "INSERT INTO TABLE Sakila.Actor(actor_id,first_name,last_name,last_update) VALUES('"+userid+"','"+userNme+"','"+lastName+"','"+lastUpdate+"')";
+			
+		}catch(Exception exception) {
+			
+		}
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Demo_Aa3 {
+
+	public static void main(String[] args) {
+		try {
+			String dBURL="jdbc:mysql://localhost:3309/sakila";
+			String userName = "root";
+			String password = "Volvo9400$l";
+			int userid=203;
+			String userNme="Kshama M";
+			String lastName="Udupa";
+			String lastUpdate = "2020-09-16 04:34:33";
+			String query = "INSERT INTO Sakila.Actor(actor_id,first_name,last_name,last_update) VALUES('"+userid+"','"+userNme+"','"+lastName+"','"+lastUpdate+"')";
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection connection=DriverManager.getConnection(dBURL, userName, password);
+			
+		}catch(Exception e) {
+			
+		}
+
+	}
+
+}

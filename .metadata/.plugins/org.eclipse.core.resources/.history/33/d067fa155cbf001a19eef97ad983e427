@@ -1,0 +1,72 @@
+package julyWeek1;
+
+/*import julyWeek1.TestThread.TestThread1;*/
+
+public class RunnableLambda {
+	public static void main(String[] args) {
+		// traditionalThreading();
+		// ananymousThreading();
+		//threadUsingRunnable();
+		
+
+	}
+	
+	public static void threadUsingRunnable() {
+		TestThread1 thread1 =new TestThread1();
+		Thread threadd = new Thread(thread1);
+		threadd.start();
+	}
+
+	public static void ananymousThreading() {
+		Thread thread1 = new Thread() {
+			// ananymous class=A class which doesn't have any name
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				System.out.println("Thread Implemented using ananymous class");
+				super.run();
+			}
+		};
+		thread1.start();
+	}
+
+	public static void traditionalThreading() {
+		String threadNameString = Thread.currentThread().getName();
+		System.out.println("S1 Execution" + threadNameString);
+
+		TestThread testThread = new TestThread();
+		testThread.start();
+
+		TestThread testThread1 = new TestThread();
+		testThread1.setName("Vishesh");
+		testThread1.start();
+
+		TestThread testThread2 = new TestThread();
+		testThread2.setName("Supriya Shankar");
+		testThread2.start();
+
+		// if run then it will execute run method
+
+	}
+}
+// User Story:Create a Lambda Expression
+
+class TestThread extends Thread {
+	@Override
+	public void run() {
+		String threadNameString = Thread.currentThread().getName();
+		System.out.println("S2 Execution: " + threadNameString);
+		System.out.println("Child Thread");
+		// TODO Auto-generated method stub
+		// super.run();
+	}	
+}
+
+class TestThread1 implements Runnable {
+
+	@Override
+	public void run() {
+		System.out.println("Thread implemented using runnable");
+	}
+
+}

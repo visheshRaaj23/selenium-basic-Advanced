@@ -1,0 +1,10 @@
+package jdbc;
+
+public class Demo_Aa5 {
+
+	public static void main(String[] args) {
+		Demo_Aa4 a4 = new Demo_Aa4();
+
+	}
+
+}

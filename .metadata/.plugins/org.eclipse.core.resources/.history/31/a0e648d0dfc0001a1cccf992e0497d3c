@@ -1,0 +1,23 @@
+package julyWeek1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.omg.CORBA.Object;
+
+public class ParallelStreamPerformanceTesting {
+
+	public static void main(String[] args) {
+		List<Integer> productList = new ArrayList<Integer>();
+		productList.add(1000);
+		for(int i=1;i<=10;i++) {
+			int lastValue=productList.get(i);
+			productList.add(lastValue+2300);
+		}
+		long start = System.nanoTime();
+		List<Object> serialList = new ArrayList<Object>();
+		
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package julyWeek1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Demo_Aa1 {
+
+	// Stores each element in insertion type.
+
+	public static void main(String[] args) {
+		List<String> arrayLis = new ArrayList<String>();
+		arrayLis.add("Vishesh Raaj");
+		arrayLis.add("Supriya Shankar");
+		arrayLis.add("Prajna P");
+		arrayLis.forEach(item -> {
+			System.out.println(item);
+		});
+
+	}
+
+}

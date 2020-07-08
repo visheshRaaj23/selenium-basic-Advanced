@@ -1,0 +1,16 @@
+package julyWeek1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.omg.CORBA.Object;
+
+public class ParallelStreamPerformanceTesting {
+
+	public static void main(String[] args) {
+		long start = System.nanoTime();
+		List<Object> serialList = new ArrayList<Object>;
+
+	}
+
+}

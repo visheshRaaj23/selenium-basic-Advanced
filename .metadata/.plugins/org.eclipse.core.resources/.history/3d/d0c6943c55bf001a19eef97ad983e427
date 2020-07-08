@@ -1,0 +1,10 @@
+package julyWeek1;
+
+public class RunnableLambda {
+
+}
+//User Story:Create a Lambda Expression
+
+class TestThread extends Thread{
+	
+}

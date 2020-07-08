@@ -1,0 +1,39 @@
+package session_13;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+//Navigate to Cricbuzz.com and add all the scores present in 3rd column
+//Match the summed score with the expected score
+//Close the browser
+
+public class Demo_A1 {
+	static {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+	}
+
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.navigate().to("https://www.cricbuzz.com/");
+		driver.findElement(By.xpath(".//a[text()='Live Scores']")).click();
+		driver.findElement(By.xpath(".//a[text()='PAK vs SL - Live']")).click();
+		driver.findElement(By.xpath(".//a[text()='Scorecard']")).click();
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,620)");
+		WebElement dataTable=driver.findElement(By.xpath(".//div/div/span[text()='Sri Lanka 1st Innings']/../.."));
+		int rowCount=dataTable.findElements(By.xpath("(.//div[@class='cb-col cb-col-100 cb-ltst-wgt-hdr'])[3] //div[@class='cb-col cb-col-100 cb-scrd-itms']")).size();
+		System.out.println(rowCount);
+		for(int i=0;i<rowCount-2;i++) {
+			String text = driver.findElements(By.xpath("(.//div[@class='cb-col cb-col-100 cb-ltst-wgt-hdr'])[3] //div[@class='cb-col cb-col-8 text-right text-bold']")).get(i).getText();
+			System.out.println(text);
+		}
+	}
+
+}

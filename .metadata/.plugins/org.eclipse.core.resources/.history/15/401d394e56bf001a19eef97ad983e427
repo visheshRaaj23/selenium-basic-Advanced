@@ -1,0 +1,25 @@
+package julyWeek1;
+
+public class RunnableLambda {
+
+	public static void main(String[] args) {
+		String threadNameString=Thread.currentThread().getName();
+		System.out.println("S1 Execution"+threadNameString);
+		TestThread testThread = new TestThread();
+		testThread.start();
+		
+		//if run then it will execute run method
+		
+	}
+}
+//User Story:Create a Lambda Expression
+
+class TestThread extends Thread{
+	@Override
+	public void run() {
+		
+		System.out.println("Child Thread");
+		// TODO Auto-generated method stub
+		super.run();
+	}
+}

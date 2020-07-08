@@ -1,0 +1,12 @@
+package jdbc;
+
+import java.sql.DriverManager;
+
+public class Demo_Aa5 extends Demo_Aa4 {
+
+	public static void main(String[] args) throws Exception {
+	Class.forName("com.mysql.jdbc.Driver");
+
+	}
+
+}

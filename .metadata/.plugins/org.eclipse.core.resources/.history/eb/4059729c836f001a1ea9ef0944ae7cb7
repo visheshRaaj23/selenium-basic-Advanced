@@ -1,0 +1,15 @@
+package jdbc;
+
+public class Demo_Aa2 {
+
+	public static void main(String[] args) {
+		try {
+			String dBURL="jdbc:mysql://localhost:3309/sakila";
+			
+		}catch(Exception exception) {
+			
+		}
+
+	}
+
+}

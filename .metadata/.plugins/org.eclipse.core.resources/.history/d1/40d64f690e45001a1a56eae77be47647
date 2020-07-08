@@ -1,0 +1,58 @@
+package section_12;
+
+import java.awt.AWTException;
+import java.awt.RenderingHints.Key;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.List;
+
+import javax.xml.xpath.XPath;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Demo_A5 {
+
+	// To Count the number of links in Google.com
+	static {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+	}
+
+	public static void main(String[] args) throws AWTException {
+		ChromeOptions option = new ChromeOptions();
+		option.addArguments("--disable-notifications");
+		WebDriver driver = new ChromeDriver(option);
+		driver.manage().window().maximize();
+		driver.navigate().to("https://www.google.com");
+		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+		int count = allLinks.size();
+		System.out.println(count);
+		
+		try {
+			driver.findElement(By.cssSelector(".gb_D.gb_pc")).click();
+//			Robot robo = new Robot();
+//			robo.keyPress(KeyEvent.VK_CONTROL);
+			WebElement frame = driver.findElement(By.xpath("(.//div/iframe)[2]"));
+			driver.switchTo().frame(frame);
+			Actions action = new Actions(driver);
+			WebDriverWait wait = new WebDriverWait(driver, 10);
+			wait.until(ExpectedConditions.elementToBeSelected(By.xpath(".//a/span[text()='Maps']/../../../.. //span[text()='Maps']")));
+			action.moveToElement(driver.findElement(By.xpath(".//a/span[text()='Maps']/../../../.. //span[text()='Maps']"))).click().build().perform();
+			//driver.findElement(By.xpath(".//a/span[text()='Maps']")).click();
+//			robo.keyRelease(KeyEvent.VK_CONTROL);
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	
+
+	}
+
+}

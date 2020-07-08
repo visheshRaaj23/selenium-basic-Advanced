@@ -1,0 +1,28 @@
+package julyWeek1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Demo_Aa1 {
+
+	// Stores each element in insertion type.
+	public static void main(String[] args) {
+		ObjectInstanceReferenceMethod();
+	}
+
+	public static void ObjectInstanceReferenceMethod() {
+		List<String> arrayLis = new ArrayList<String>();
+		arrayLis.add("Vishesh Raaj");
+		arrayLis.add("Supriya Shankar");
+		arrayLis.add("Prajna P");
+		arrayLis.forEach(item -> {
+			if (item.length() > 12) {
+				System.out.println(item + ", I Love You");
+			}
+
+		});
+		arrayLis.forEach(System.out::println);
+
+	}
+
+}
