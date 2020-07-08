@@ -21,6 +21,7 @@ public class ParallelStreamPerformanceTesting {
 		productList.add(11653);
 		for (int i = 0; i < 10; i++) {
 			int lastValue = productList.get(i);
+			
 			productList.add(lastValue + 2300);
 		}
 		System.out.println("Input List ---->" + productList);
