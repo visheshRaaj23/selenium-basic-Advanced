@@ -37,6 +37,8 @@ public class MapFilterReduce {
 		System.out.println(Arrays.stream(playersSalary).sum());
 		System.out.println(Arrays.stream(playersSalary).min());
 		System.out.println(Arrays.stream(playersSalary).max());
+		long number = Arrays.stream(playersSalary).max().getAsLong();
+		System.out.println(number);
 		System.out.println(Arrays.stream(playersSalary).count());
 	}
 
