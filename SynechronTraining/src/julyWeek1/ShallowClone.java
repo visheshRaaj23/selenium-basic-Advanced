@@ -24,6 +24,7 @@ public class ShallowClone implements Cloneable {
 			System.out.println("Original Object" + originalObject);
 			System.out.println("Cloned Object" + clonedObject);
 			originalObject.numbers[1] = 500;
+			originalObject.numbers[2]=400;
 			nameString = "Vishesh";
 			value = 8.8f;
 			floatWrapper = 23.9f;

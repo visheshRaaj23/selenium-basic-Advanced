@@ -8,7 +8,7 @@ public class ShallowDriver extends ShallowClone {
 
 	public static void main(String[] args) {
 		ShallowClone driver = new ShallowClone(2);
-		driver.cloneTest(4);
+		driver.cloneTest(5);
 	}
 
 }
