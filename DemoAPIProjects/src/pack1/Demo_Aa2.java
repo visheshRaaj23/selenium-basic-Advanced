@@ -3,6 +3,7 @@ package pack1;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.jetbrains.annotations.TestOnly;
 import org.testng.annotations.Test;
 
 
@@ -11,7 +12,7 @@ import io.restassured.path.json.JsonPath;
 
 public class Demo_Aa2 {
 	
-	@Test
+	@TestOnly
 	public void parseJSONInput() throws Exception {
 		JsonPath js = new JsonPath(payLoads.RSAMapPayLoad.courseDetails());
 		int countOfArray = js.getInt("courses.size()");
