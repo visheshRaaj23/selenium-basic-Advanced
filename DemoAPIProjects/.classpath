@@ -17,7 +17,6 @@
 	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Desktop/Trainings/API Testing/04-19-2020/commons-lang3-3.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Desktop/Trainings/API Testing/04-19-2020/groovy-3.0.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Desktop/Trainings/API Testing/04-19-2020/groovy-json-3.0.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Desktop/Trainings/API Testing/04-19-2020/guava-16.0.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Desktop/Trainings/API Testing/04-19-2020/hamcrest-2.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Desktop/Trainings/API Testing/04-19-2020/jackson-annotations-2.10.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Desktop/Trainings/API Testing/04-19-2020/jackson-core-2.10.2.jar"/>
@@ -93,5 +92,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Downloads/testng-6.14.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Downloads/pdfbox-2.0.20.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Downloads/fontbox-2.0.20.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Downloads/guava-22.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5036" started-at="2020-08-02T08:10:16Z" finished-at="2020-08-02T08:10:21Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5036" started-at="2020-08-02T08:10:16Z" finished-at="2020-08-02T08:10:21Z">
+      <class name="utilities.Read_PDF">
+        <test-method status="FAIL" signature="readPDFEngine()[pri:0, instance:utilities.Read_PDF@7cf10a6f]" name="readPDFEngine" duration-ms="4946" started-at="2020-08-02T13:40:16Z" finished-at="2020-08-02T13:40:21Z">
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[org/apache/fontbox/afm/AFMParser]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: org/apache/fontbox/afm/AFMParser
+	at org.apache.pdfbox.pdmodel.font.Standard14Fonts.addAFM(Standard14Fonts.java:123)
+	at org.apache.pdfbox.pdmodel.font.Standard14Fonts.addAFM(Standard14Fonts.java:102)
+	at org.apache.pdfbox.pdmodel.font.Standard14Fonts.<clinit>(Standard14Fonts.java:45)
+	at org.apache.pdfbox.pdmodel.font.PDFont.<init>(PDFont.java:113)
+	at org.apache.pdfbox.pdmodel.font.PDType0Font.<init>(PDType0Font.java:180)
+	at org.apache.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:97)
+	at org.apache.pdfbox.pdmodel.PDResources.getFont(PDResources.java:146)
+	at org.apache.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:66)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:932)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:510)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:484)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:156)
+	at org.apache.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:139)
+	at org.apache.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:391)
+	at org.apache.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:319)
+	at org.apache.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:266)
+	at org.apache.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:227)
+	at utilities.Read_PDF.readPDFEngine(Read_PDF.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.ClassNotFoundException: org.apache.fontbox.afm.AFMParser
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 42 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPDFEngine -->
+      </class> <!-- utilities.Read_PDF -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
