@@ -21,6 +21,8 @@
     <artifactId>poi</artifactId>
     <version>4.1.2</version>
 </dependency>
+
+
     <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 <dependency>
     <groupId>org.apache.poi</groupId>
@@ -34,12 +36,6 @@
     <version>3.141.59</version>
 </dependency>
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.1.0</version>
-    <scope>test</scope>
-</dependency>
     <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
 <dependency>
@@ -48,6 +44,7 @@
     <version>5.6.0</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
